@@ -18,4 +18,6 @@ public interface CarService {
     void updateById(Car car);
 
     void insertCar(Car car);
+
+    Boolean buyCar(String carName,String carType,String carSeries,int count);
 }
