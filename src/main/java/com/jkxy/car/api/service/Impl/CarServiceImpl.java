@@ -29,7 +29,7 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public List<Car> findByCarName(String carName) {
-        return carDao.findByCarName(carName);
+        return carDao.findByCarNames(carName);
     }
 
     @Override

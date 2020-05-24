@@ -28,4 +28,7 @@ public interface CarDao {
 
     @Select("select * from carMessage where carName = #{carName} and carType=#{carType} and carSeries=#{carSeries} ")
     List<Car> findCountByCar(@Param("carName") String carName ,@Param("carType") String carType,@Param("carSeries") String carSeries);
+
+    @Select("select * from carMessage where carName like '%'|| #{carName}||'%'")
+    List<Car> findByCarNames(String carName);
 }
